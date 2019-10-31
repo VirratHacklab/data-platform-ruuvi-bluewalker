@@ -1,0 +1,15 @@
+[Unit]
+Description=RuuviTag Bluewalker Relay
+After=ruuvi-socket.service
+Conflicts=ruuvi-socket.timer
+ 
+[Service]
+ExecStart=/bin/bash /home/pi/ruuvi-socket/bluewalker.sh
+WorkingDirectory=/home/pi/ruuvi-socket/
+StandardOutput=null
+StandardError=null
+Restart=no
+User=pi
+ 
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=RuuviTag IoT Hub Gateway
+After=network-online.target
+ 
+[Service]
+ExecStart=/bin/bash /home/pi/ruuvi-socket/iothub.sh
+WorkingDirectory=/home/pi/ruuvi-socket/
+StandardOutput=null
+StandardError=null
+Restart=always
+User=pi
+ 
+[Install]
+WantedBy=multi-user.target

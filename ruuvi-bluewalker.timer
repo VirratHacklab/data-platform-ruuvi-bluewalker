@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Bluewalker once per minute and on boot
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
